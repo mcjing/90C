@@ -1,0 +1,28 @@
+0.2.3
+==================
+* rename BlockModel.class.php to BlockedModel.class.php
+* VisitorModel: $visitor = $this->where("name='$vid'")->find();
+
+
+0.2.2 (2014/11/07)
+==================
+
+* rewrite README.md
+* fix config.php, View/config.html
+
+0.2.1  (2014/11/06)
+==================
+
+change project name to 'webim-for-onethink'
+
+0.2  (2014/11/06)
+==================
+
+merge [webim-for-thinkphp 5.7](https://github.com/webim/webim-for-thinkphp) code
+
+0.1 (2014/10/30)
+===============
+
+fork from [webim-for-onethink](https://github.com/yangweijie/webim-for-onethink)
+
+
