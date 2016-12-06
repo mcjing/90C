@@ -6,7 +6,3 @@
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
 </IfModule>
-
-
-RewriteRule ^/index.html$ /index.php?s=/Home/Index/index.html
-

@@ -32,12 +32,18 @@
 			<div class="container">
 				<div class="support_type_content">
 					<div class="kzf-mod-center">
-						<article:list name="list1" category="$category['id']" child="true">
-							<div class="span2 col-xs-4">
-								<a href="/a/xinwenzixun/pingtaidongtai/" class="support_type_list normal" title="{$list1.title}">{$list1.title}</a>
-							</div>
-						</article:list>
-		
+						<div class="span2 col-xs-4">
+							<a href="/a/xinwenzixun/pingtaidongtai/"
+								class="support_type_list normal" title="平台动态">平台动态</a>
+						</div>
+						<div class="span2 col-xs-4">
+							<a href="/a/xinwenzixun/xingyexinwen/"
+								class="support_type_list normal" title="行业新闻">行业新闻</a>
+						</div>
+						<div class="span2 col-xs-4">
+							<a href="/a/xinwenzixun/bangzhuzhongxin/"
+								class="support_type_list normal" title="帮助中心">帮助中心</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -52,12 +58,12 @@
 			<div class="container" id="newslist">
 			<volist name="list" id="data">
 				<div class="rowFluid">
-					<a href="{:U('Article/detail',array('id'=>$data['id']))}">
+					<a href="/a/xinwenzixun/bangzhuzhongxin/21.html">
 						<div class="kzf-mod-new-li">
 							<div class="span2">
 								<div class="kzf-mod-new-time-box">
 									<div class="kzf-mod-new-time-date">
-										<span>{$data.create_time|date='m',###}</span>/<span>{$data.create_time|date='d',###}</span>
+										<span>10</span>/<span>01</span>
 									</div>
 									<div class="kzf-mod-new-time-year">{$data.create_time|date='Y',###}</div>
 								</div>
@@ -82,4 +88,34 @@
 	</div>
 </div>
 
+
+
+<div class="span9">
+        <!-- Contents
+        ================================================== -->
+        <section id="contents">
+
+			<volist name="list" id="data">
+				<div class="">
+					<h3 class="ellipsis"><a href="{:U('Article/detail?id='.$data['id'])}">{$data.title}</a></h3>
+				</div>
+				<div>
+					<p class="lead">{$data.description}</p>
+				</div>
+				<div>
+					<span><a href="{:U('Article/detail?id='.$data['id'])}">查看全文</a></span>
+					<span class="pull-right">
+						<span class="author">{$data.uid|get_username}</span>&nbsp;&nbsp;
+						<span>发表于 {$data.create_time|date='Y-m-d H:i:s',###}</span>
+						<span>阅读({$data.view})</span>&nbsp;&nbsp;
+                    </span>
+				</div>
+				<hr/>
+	        </volist>
+
+            <div class="onethink pagination pagination-right pagination-large">
+                <article:page cate="$category['id']" listrow="$category['list_row']" />
+            </div>
+        </section>
+      </div>
 </block>

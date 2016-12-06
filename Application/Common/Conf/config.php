@@ -36,10 +36,10 @@ return array(
 
     /* 数据库配置 */
     'DB_TYPE'   => 'mysql', // 数据库类型
-    'DB_HOST'   => '127.0.0.1', // 服务器地址
+    'DB_HOST'   => '110.173.18.235', // 服务器地址
     'DB_NAME'   => '90C', // 数据库名
-    'DB_USER'   => 'root', // 用户名
-    'DB_PWD'    => 'root',  // 密码
+    'DB_USER'   => '90c', // 用户名
+    'DB_PWD'    => 'mcjing2016',  // 密码
     'DB_PORT'   => '3306', // 端口
     'DB_PREFIX' => 'onethink_', // 数据库表前缀
 

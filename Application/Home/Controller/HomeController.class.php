@@ -20,6 +20,8 @@ class HomeController extends Controller {
 	public function _empty(){
 		$this->redirect('Index/index');
 	}
+	
+	
 
 
     protected function _initialize(){
