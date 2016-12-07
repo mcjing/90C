@@ -16,7 +16,7 @@ use Think\Page;
  */
 class DocumentModel extends Model{
 
-    /* 自动验证规则 */
+    /* 自动验证规则  */
     protected $_validate = array(
         array('name', '/^[a-zA-Z]\w{0,30}$/', '文档标识不合法', self::VALUE_VALIDATE, 'regex', self::MODEL_BOTH),
         array('name', '', '标识已经存在', self::VALUE_VALIDATE, 'unique', self::MODEL_BOTH),
@@ -135,6 +135,7 @@ class DocumentModel extends Model{
     }
 
     public function update(){
+        
         /* 检查文档类型是否符合要求 */
         $Model = new \Admin\Model\DocumentModel();
         $res = $Model->checkDocumentType( I('type'), I('pid') );

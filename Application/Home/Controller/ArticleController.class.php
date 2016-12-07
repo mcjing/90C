@@ -32,6 +32,8 @@ class ArticleController extends HomeController {
 	public function lists($p = 1){
 		/* 分类信息 */
 		$category = $this->category();
+		
+		$category_list = D('category')->getTree($category['id']);
 
 		/* 获取当前分类列表 */
 		$Document = D('Document');
@@ -39,8 +41,8 @@ class ArticleController extends HomeController {
 		if(false === $list){
 			$this->error('获取列表数据失败！');
 		}
-
 		/* 模板赋值并渲染模板 */
+		$this->assign('category_list',$category_list);
 		$this->assign('category', $category);
 		$this->assign('list', $list);
 		$this->display($category['template_lists']);

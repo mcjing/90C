@@ -32,12 +32,7 @@
 			<div class="container">
 				<div class="support_type_content">
 					<div class="kzf-mod-center">
-						<article:list name="list1" category="$category['id']" child="true">
-							<div class="span2 col-xs-4">
-								<a href="/a/xinwenzixun/pingtaidongtai/" class="support_type_list normal" title="{$list1.title}">{$list1.title}</a>
-							</div>
-						</article:list>
-		
+		  				{:W('Category/lists', array($category, ACTION_NAME == 'index'))} 
 					</div>
 				</div>
 			</div>
