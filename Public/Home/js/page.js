@@ -75,8 +75,6 @@ $(document).ready(function() {
 	    } else { }
 	});
 
-
-    /*·µ»Ø¶¥²¿*/
 	$("body").append('<div id="toTop">Top</div>');
 	$("body").append('<div id="close"></div>');
 	$("body").append('<div id="show"></div>');

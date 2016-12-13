@@ -41,7 +41,7 @@ class Page{
      */
     public function __construct($totalRows, $listRows=20, $parameter = array()) {
 
-        echo $totalRows;
+      
         C('VAR_PAGE') && $this->p = C('VAR_PAGE'); //设置分页参数名称
         /* 基础设置 */
         $this->totalRows  = $totalRows; //设置总记录数
