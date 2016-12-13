@@ -23,10 +23,10 @@ return array(
     'DATA_CACHE_PREFIX' => 'onethink_', // 缓存前缀
     'DATA_CACHE_TYPE'   => 'File', // 数据缓存类型
 
-    'URL_ROUTER_ON'   => true, 
+    'URL_ROUTER_ON'   => false,
     'URL_ROUTE_RULES'=>array(  
-      'index'        =>  'Index/index',   //首页  
-      'article/:id\d$'     =>  'Article/detail',  //文章页  
+      'index'        =>  'Index/index',   //首页
+      'article/:id\d$'     =>  'Article/detail',  //文章页
       ':category$'=> 'Article/lists'  //列表页  
     ),
 

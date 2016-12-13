@@ -30,4 +30,20 @@ class IndexController extends HomeController {
         $this->display();
     }
 
+
+    public function about(){
+
+        $this->display();
+    }
+
+    public  function  products(){
+
+        $this->display();
+    }
+
+    public  function  contact(){
+
+        $this->display();
+    }
+
 }

@@ -5,4 +5,11 @@
  RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
 </IfModule>
 
+
+RewriteRule /about.html$  /index.php?s=/index/about [L]
+RewriteRule /products.html$  /index.php?s=/index/products [L]
+
+RewriteRule /goods/(\w+).html$  /Goods/lists/category/$1.html [L]
+
+
 RewriteRule /news/(\w+).html$  /Article/lists/category/$1.html [L]
